@@ -1,3 +1,7 @@
 -- compilar o ts
     tsc nomearquivo.ts
 
+-- Type inference
+    let teste = ""
+-- Type annotation
+    let teste: string = ""

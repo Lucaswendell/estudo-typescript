@@ -29,3 +29,8 @@ console.log(typeof a);
 
 a = true;
 console.log(a)
+
+// 4 - inference e annotation
+const ann: string = "Teste";
+
+const inf = "Teste";
