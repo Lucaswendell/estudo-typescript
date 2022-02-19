@@ -70,3 +70,25 @@ function advancedGreeting(firstName: string, lastName?: string){
 
 console.log(advancedGreeting("Lucas", "Wendel"));
 console.log(advancedGreeting("Lucas"));
+
+// 10 - union type
+function showBalance(balance: string | number){
+    console.log(`o saldo da conta é R$${balance}`);
+}
+
+showBalance(500);
+showBalance("100");
+
+const arr2: Array<number | string | boolean> = [1,23,"aws", false];
+
+//11 - Avançando em union types
+function showUserRole(role: boolean | string){
+    if(typeof role === "boolean"){
+        return "Usuario não aprovado";
+    }
+
+    return "A função do usuario é: " + role;
+}
+
+console.log(showUserRole(false));
+console.log(showUserRole("Admin"));
