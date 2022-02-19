@@ -26,3 +26,10 @@ function soma(a:number, b:number){
 }
 
 soma(3,4);
+
+// 5 - retorno de função
+function greeting(name: string): string{
+    return `Olá ${name}`;
+}
+
+console.log(greeting("Mateus"));
