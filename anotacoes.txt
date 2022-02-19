@@ -5,3 +5,7 @@
     let teste = ""
 -- Type annotation
     let teste: string = ""
+
+-- gerar arquivo de configuração
+    tsc --init
+
