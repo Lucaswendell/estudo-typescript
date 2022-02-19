@@ -13,3 +13,9 @@ const nums: Array<number> = [100, 200];
 nums.push(300);
 
 console.log(nums);
+
+// 3 - any 
+const arr1: any = [1,2,"etste", [], {}];
+console.log(arr1);
+arr1.push([1,23])
+console.log(arr1);
