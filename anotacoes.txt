@@ -1,0 +1,3 @@
+-- compilar o ts
+    tsc nomearquivo.ts
+

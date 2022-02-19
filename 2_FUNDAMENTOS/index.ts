@@ -10,3 +10,14 @@ const y:number = 15.3456794;
 console.log(y);
 
 console.log(y.toPrecision(2));
+
+// 2 - STRING
+const firtName: string = "Lucas";
+console.log(firtName.toUpperCase());
+
+let fullName: string;
+
+const lastName: string = "Wendel";
+
+fullName = firtName + " " + lastName;
+console.log(fullName);
