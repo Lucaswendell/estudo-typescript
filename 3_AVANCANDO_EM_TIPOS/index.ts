@@ -19,3 +19,10 @@ const arr1: any = [1,2,"etste", [], {}];
 console.log(arr1);
 arr1.push([1,23])
 console.log(arr1);
+
+// 4 - paramentros tipados 
+function soma(a:number, b:number){
+    console.log(a + b)
+}
+
+soma(3,4);
