@@ -13,4 +13,9 @@ var fullName;
 var lastName = "Wendel";
 fullName = firtName + " " + lastName;
 console.log(fullName);
-// 3 - boolean
+//Boolean
+var a = false;
+console.log(a);
+console.log(typeof a);
+a = true;
+console.log(a);

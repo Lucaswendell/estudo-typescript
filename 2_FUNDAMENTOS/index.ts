@@ -21,3 +21,11 @@ const lastName: string = "Wendel";
 
 fullName = firtName + " " + lastName;
 console.log(fullName);
+
+//Boolean
+let a:boolean = false;
+console.log(a);
+console.log(typeof a);
+
+a = true;
+console.log(a)
