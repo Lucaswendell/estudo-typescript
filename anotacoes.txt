@@ -9,3 +9,6 @@
 -- gerar arquivo de configuração
     tsc --init
 
+-- compilar atutomaticamente
+    tsc -w
+
