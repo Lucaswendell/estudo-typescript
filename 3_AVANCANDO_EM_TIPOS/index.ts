@@ -33,3 +33,10 @@ function greeting(name: string): string{
 }
 
 console.log(greeting("Mateus"));
+
+//6 - função anonimas
+setTimeout(() => {
+    const sallary: number = 1000;
+    // console.log(parseFloat(sallary))
+    // console.log(sallary)
+}, 2);

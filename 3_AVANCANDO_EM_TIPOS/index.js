@@ -23,3 +23,9 @@ function greeting(name) {
     return `Olá ${name}`;
 }
 console.log(greeting("Mateus"));
+//6 - função anonimas
+setTimeout(() => {
+    const sallary = 1000;
+    // console.log(parseFloat(sallary))
+    // console.log(sallary)
+}, 2);
