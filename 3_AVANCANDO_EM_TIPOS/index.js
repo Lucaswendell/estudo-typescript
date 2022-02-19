@@ -44,3 +44,10 @@ function showNumbers(a, b, c) {
 }
 showNumbers(1, 2, 3);
 showNumbers(1, 2);
+//9 - Validando argumentos opcionais
+function advancedGreeting(firstName, lastName) {
+    const message = lastName ? `Olá, ${firstName} ${lastName}, tudo bem?` : `Olá, ${firstName}, tudo bem?`;
+    return message;
+}
+console.log(advancedGreeting("Lucas", "Wendel"));
+console.log(advancedGreeting("Lucas"));
