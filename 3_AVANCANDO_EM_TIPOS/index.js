@@ -74,3 +74,12 @@ showId(1);
 showId(200);
 showId('200');
 showId('aa');
+function showCoordenates(obj) {
+    console.log(obj);
+}
+const coordObj = {
+    x: 100,
+    z: 200,
+    y: 300
+};
+showCoordenates(coordObj);

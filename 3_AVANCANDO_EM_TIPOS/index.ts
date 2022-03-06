@@ -103,3 +103,22 @@ showId(1);
 showId(200);
 showId('200');
 showId('aa');
+
+// 13 - interface
+interface Point {
+    x: number,
+    y: number,
+    z: number
+}
+
+function showCoordenates(obj: Point){
+    console.log(obj);
+}
+
+const coordObj: Point = {
+    x: 100,
+    z: 200,
+    y: 300
+}
+
+showCoordenates(coordObj);
