@@ -122,3 +122,28 @@ const coordObj: Point = {
 }
 
 showCoordenates(coordObj);
+
+//14 - Interface vs type alias
+interface Person {
+    name: string
+}
+
+interface Person {
+    age: number
+}
+
+
+const personInterface: Person = {
+    name: 'Eu',
+    age: 100
+}
+
+console.log(personInterface);
+
+type personType = {
+    name: string
+}
+
+// type personType = {
+
+// }

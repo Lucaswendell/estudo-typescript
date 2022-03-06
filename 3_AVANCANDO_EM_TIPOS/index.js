@@ -83,3 +83,10 @@ const coordObj = {
     y: 300
 };
 showCoordenates(coordObj);
+const personInterface = {
+    name: 'Eu',
+    age: 100
+};
+console.log(personInterface);
+// type personType = {
+// }
