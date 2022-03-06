@@ -147,3 +147,12 @@ type personType = {
 // type personType = {
 
 // }
+
+//15 - literal type
+
+function showDirection(direction: "left" | "right" | "center") {
+    console.log(direction);
+}
+
+showDirection("center");
+showDirection("right");

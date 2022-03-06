@@ -90,3 +90,9 @@ const personInterface = {
 console.log(personInterface);
 // type personType = {
 // }
+//15 - literal type
+function showDirection(direction) {
+    console.log(direction);
+}
+showDirection("center");
+showDirection("right");
