@@ -96,3 +96,6 @@ function showDirection(direction) {
 }
 showDirection("center");
 showDirection("right");
+//16 - non null
+const p = document.querySelector("#some-p");
+console.log(p.innerHTML);
