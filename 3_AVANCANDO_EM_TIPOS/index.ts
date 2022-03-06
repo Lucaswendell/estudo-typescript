@@ -160,3 +160,9 @@ showDirection("right");
 //16 - non null
 const p = document.querySelector("#some-p")
 console.log(p!.innerHTML)
+
+//17 - bigint
+let n: bigint;
+
+n = 100n
+console.log(n)
