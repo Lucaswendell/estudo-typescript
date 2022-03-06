@@ -166,3 +166,11 @@ let n: bigint;
 
 n = 100n
 console.log(n)
+
+//18 - symbol
+let symbolA = Symbol("a");
+let symbolB = Symbol("b");
+
+console.log(symbolA);
+console.log(symbolB);
+console.log(symbolA === symbolB);
