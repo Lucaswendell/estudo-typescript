@@ -56,3 +56,11 @@ function biggestNumber<T extends number | string>(a: T, b: T): T{
 console.log(biggestNumber(4,3));
 console.log(biggestNumber("2","1"));
 //console.log(biggestNumber("5",1));
+
+//5 - especificar tipo de argumento
+function mergeArrays<T>(arr1: T[], arr2: T[]){
+    return arr1.concat(arr2);
+}
+
+console.log(mergeArrays([1,4,5], [1,2,3]))
+console.log(mergeArrays<number | string>(["a","b","s"], [1,2,3]))
