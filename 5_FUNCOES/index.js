@@ -30,3 +30,17 @@ function mergeObjects(obj1, obj2) {
 }
 const newObject = mergeObjects({ name: "Lucas" }, { age: 20, job: "Programmer" });
 console.log(newObject);
+//4 - Contraints
+function biggestNumber(a, b) {
+    let biggest;
+    if (+a > +b) {
+        biggest = a;
+    }
+    else {
+        biggest = b;
+    }
+    return biggest;
+}
+console.log(biggestNumber(4, 3));
+console.log(biggestNumber("2", "1"));
+//console.log(biggestNumber("5",1));
