@@ -59,13 +59,13 @@ function mordernGreeting(name, greet) {
 }
 console.log(mordernGreeting("Lucas"));
 console.log(mordernGreeting("Lucas", "Mr."));
-//6 - parametros default
+//7 - parametros default
 function somaDefault(n, m = 10) {
     return n + m;
 }
 console.log(somaDefault(10));
 console.log(somaDefault(10, 30));
-// 7 - unknown
+// 8 - unknown
 function doSomething(x) {
     if (Array.isArray(x)) {
         console.log(x[0]);
@@ -73,5 +73,15 @@ function doSomething(x) {
     else if (typeof x === 'number') {
         console.log('X é um numero');
     }
+    else {
+        console.log(x);
+    }
 }
 doSomething('x');
+doSomething(1);
+doSomething([1, 2, 3, 4]);
+//9 - tipo never
+function showErrorMessage(msg) {
+    throw new Error(msg);
+}
+// showErrorMessage('Mensagem de erro');
