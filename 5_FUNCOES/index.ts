@@ -76,3 +76,11 @@ function mordernGreeting(name: string, greet?: string){
 
 console.log(mordernGreeting("Lucas"));
 console.log(mordernGreeting("Lucas", "Mr."));
+
+//6 - parametros default
+function somaDefault(n: number, m = 10){
+    return n + m;
+}
+
+console.log(somaDefault(10))
+console.log(somaDefault(10,30))

@@ -59,3 +59,9 @@ function mordernGreeting(name, greet) {
 }
 console.log(mordernGreeting("Lucas"));
 console.log(mordernGreeting("Lucas", "Mr."));
+//6 - parametros default
+function somaDefault(n, m = 10) {
+    return n + m;
+}
+console.log(somaDefault(10));
+console.log(somaDefault(10, 30));
