@@ -116,3 +116,16 @@ function sumAll(...n: number[]) {
 console.log("sumAll: " + sumAll(2,3,4,5));
 console.log("sumAll: " + sumAll(1,2,3,4));
 
+//11 - Destructing como parametro
+type product = {
+    name: string,
+    price: number
+}
+function showProductDetails({ name, price }: product): string{
+    return `O nome do produto é ${name} e ele custa R$${price.toLocaleString()}`;
+}
+
+const shirt = {name: "Camisa", price: 49.99};
+console.log(showProductDetails(shirt));
+
+
