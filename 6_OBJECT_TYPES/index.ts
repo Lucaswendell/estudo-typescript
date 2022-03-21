@@ -44,3 +44,17 @@ const u2: User = {
 
 showUserDetails(u1);
 showUserDetails(u2);
+
+//3 - readonly
+interface Car {
+    brand: string,
+    readonly wheels: number
+}
+
+const fusca: Car = {
+    brand: "VW",
+    wheels: 4
+}
+
+console.log(fusca);
+// fusca.wheels = 5
