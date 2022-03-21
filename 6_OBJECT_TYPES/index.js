@@ -10,3 +10,18 @@ const shirt = {
     isAvailable: true
 };
 showProductDetails(shirt);
+function showUserDetails(user) {
+    console.log(`O usuário tem o e-mail: ${user.email}`);
+    if (user.role) {
+        console.log(`À função do usuário é: ${user.role}`);
+    }
+}
+const u1 = {
+    email: "eu@eu.com"
+};
+const u2 = {
+    email: "admin@admin.com",
+    role: "nothing"
+};
+showUserDetails(u1);
+showUserDetails(u2);

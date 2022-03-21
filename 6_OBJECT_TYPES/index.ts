@@ -19,3 +19,28 @@ const shirt: Product = {
 
 showProductDetails(shirt);
 
+//2 - propriedades opcionais em interfaces
+interface User {
+    email: string,
+    role?: string
+}
+
+
+function showUserDetails(user: User){
+    console.log(`O usuário tem o e-mail: ${user.email}`);
+    if(user.role){
+        console.log(`À função do usuário é: ${user.role}`);
+    }
+}
+
+const u1: User = {
+    email: "eu@eu.com"
+}
+
+const u2: User = {
+    email: "admin@admin.com",
+    role: "nothing"
+}
+
+showUserDetails(u1);
+showUserDetails(u2);
