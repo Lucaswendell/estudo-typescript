@@ -108,3 +108,11 @@ function showErrorMessage(msg: string): never{
 
 // showErrorMessage('Mensagem de erro');
 
+//10 - Rest parameters
+function sumAll(...n: number[]) {
+    return n.reduce((number, sum) => number + sum);
+}
+
+console.log("sumAll: " + sumAll(2,3,4,5));
+console.log("sumAll: " + sumAll(1,2,3,4));
+
