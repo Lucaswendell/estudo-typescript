@@ -64,3 +64,15 @@ function mergeArrays<T>(arr1: T[], arr2: T[]){
 
 console.log(mergeArrays([1,4,5], [1,2,3]))
 console.log(mergeArrays<number | string>(["a","b","s"], [1,2,3]))
+
+//6 - paramentros opcionais
+
+function mordernGreeting(name: string, greet?: string){
+    if(greet){
+        return `Olá ${greet} ${name}, tudo bem?`
+    }
+    return `Olá ${name}, tudo bem?`
+}
+
+console.log(mordernGreeting("Lucas"));
+console.log(mordernGreeting("Lucas", "Mr."));

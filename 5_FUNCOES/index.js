@@ -50,3 +50,12 @@ function mergeArrays(arr1, arr2) {
 }
 console.log(mergeArrays([1, 4, 5], [1, 2, 3]));
 console.log(mergeArrays(["a", "b", "s"], [1, 2, 3]));
+//6 - paramentros opcionais
+function mordernGreeting(name, greet) {
+    if (greet) {
+        return `Olá ${greet} ${name}, tudo bem?`;
+    }
+    return `Olá ${name}, tudo bem?`;
+}
+console.log(mordernGreeting("Lucas"));
+console.log(mordernGreeting("Lucas", "Mr."));
