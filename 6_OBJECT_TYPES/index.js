@@ -47,3 +47,10 @@ const goku = {
 };
 console.log(lucas);
 console.log(goku);
+const human = {
+    name: "Arnold",
+    type: "shotgun",
+    caliber: 12
+};
+console.log(human);
+console.log(human.caliber);
