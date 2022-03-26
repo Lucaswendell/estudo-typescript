@@ -58,3 +58,17 @@ const fusca: Car = {
 
 console.log(fusca);
 // fusca.wheels = 5
+
+//4 - index signature
+interface CoordObject {
+    [index: string]: number
+}
+
+const coord: CoordObject = {
+    x: 1
+}
+
+coord.y = 10;
+coord[1] = 10;
+
+console.log(coord)
