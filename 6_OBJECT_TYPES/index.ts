@@ -1,5 +1,4 @@
 // 1 - tipo de objeto para função com interface
-
 interface Product {
     name: string,
     price: number,

@@ -16,4 +16,7 @@ const otherObject = { name: "Carro", cor: "Roupa" };
 const thirdObj = { price: 19.1, cor: "Roupa" };
 showProductName(myObj);
 showProductName(otherObject);
-// showProductName(thirdObj);
+const myCar = { name: "Fusca", wheels: 4, engine: 1.0, color: "Branca" };
+const myPen = { name: "Fusca", wheels: false, engine: false, color: "Azul" };
+console.log(myCar);
+console.log(myPen);
