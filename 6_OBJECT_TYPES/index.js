@@ -36,3 +36,14 @@ const coord = {
 coord.y = 10;
 coord[1] = 10;
 console.log(coord);
+const lucas = {
+    name: "Lucas",
+    age: 20
+};
+const goku = {
+    name: "Goku",
+    age: 132,
+    superpower: ['Kamehameha', 'Genki Dama']
+};
+console.log(lucas);
+console.log(goku);

@@ -72,3 +72,27 @@ coord.y = 10;
 coord[1] = 10;
 
 console.log(coord)
+
+//5 - extending interfaces
+interface Human {
+    name: string,
+    age: number
+}
+
+interface SuperHuman extends Human {
+    superpower: string[]
+}
+
+const lucas: Human = {
+    name: "Lucas",
+    age: 20
+}
+
+const goku: SuperHuman = {
+    name: "Goku",
+    age: 132,
+    superpower: ['Kamehameha', 'Genki Dama']
+}
+
+console.log(lucas);
+console.log(goku);
