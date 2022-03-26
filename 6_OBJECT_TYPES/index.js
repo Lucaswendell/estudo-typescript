@@ -61,3 +61,10 @@ myArray.forEach(item => {
 });
 myArray = myArray.map(item => `Fruta: ${item}`);
 console.log(myArray);
+const myNumberArray = [1, 3, 4, 5, 6];
+// const myNumberArray2: fiveNumbers = [1,3,4,5,6,5];
+console.log(myNumberArray);
+const anotherUser = ["Lucas", 20];
+console.log(anotherUser[0]);
+anotherUser[0] = "Wendel";
+console.log(anotherUser[0]);

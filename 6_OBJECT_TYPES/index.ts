@@ -129,3 +129,16 @@ myArray = myArray.map(item => `Fruta: ${item}`)
 
 console.log(myArray);
 
+//8 - tuplas
+type fiveNumbers = [number, number, number, number, number];
+
+const myNumberArray: fiveNumbers = [1,3,4,5,6];
+// const myNumberArray2: fiveNumbers = [1,3,4,5,6,5];
+console.log(myNumberArray)
+
+type nameAndAge = [string, number];
+
+const anotherUser: nameAndAge = ["Lucas", 20];
+console.log(anotherUser[0])
+anotherUser[0] = "Wendel";
+console.log(anotherUser[0])
