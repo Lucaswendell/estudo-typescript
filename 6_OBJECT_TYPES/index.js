@@ -54,3 +54,10 @@ const human = {
 };
 console.log(human);
 console.log(human.caliber);
+// 7 - readonly array 
+let myArray = ["Maçã", "Laranja", "Banada"];
+myArray.forEach(item => {
+    console.log("Fruta: " + item);
+});
+myArray = myArray.map(item => `Fruta: ${item}`);
+console.log(myArray);
