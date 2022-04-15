@@ -52,3 +52,22 @@ const server = {
 console.log(getSomeKey(server, "hd"))
 console.log(getSomeKey(server, "ram"))
 // console.log(getSomeKey(server, "teste"))
+
+//5 - keyof operator
+type Character = {name: string, age: number, hasDriveLicense: boolean};
+
+type C = keyof Character;
+
+function showCharacter(obj: Character, name: C){
+    return obj[name];
+}
+
+const myCharacter: Character = {
+    name: "Lucas",
+    age: 20,
+    hasDriveLicense: false
+}
+
+console.log(showCharacter(myCharacter, "age"))
+console.log(showCharacter(myCharacter, "hasDriveLicense"))
+console.log(showCharacter(myCharacter, "name"))
