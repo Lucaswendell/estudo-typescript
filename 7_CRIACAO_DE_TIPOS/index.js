@@ -41,3 +41,7 @@ const myCharacter = {
 console.log(showCharacter(myCharacter, "age"));
 console.log(showCharacter(myCharacter, "hasDriveLicense"));
 console.log(showCharacter(myCharacter, "name"));
+//6 - typeof type operator
+const userName = "Lucas";
+const userName2 = "Wendel";
+const userName4 = "Joaquim";

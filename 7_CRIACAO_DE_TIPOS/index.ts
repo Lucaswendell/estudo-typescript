@@ -71,3 +71,12 @@ const myCharacter: Character = {
 console.log(showCharacter(myCharacter, "age"))
 console.log(showCharacter(myCharacter, "hasDriveLicense"))
 console.log(showCharacter(myCharacter, "name"))
+
+//6 - typeof type operator
+const userName: string = "Lucas";
+
+const userName2: typeof userName = "Wendel";
+
+type x = typeof userName;
+
+const userName4: x = "Joaquim";
