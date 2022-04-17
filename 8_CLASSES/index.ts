@@ -162,3 +162,39 @@ coord.fillY = 15;
 
 console.log(coord);
 console.log(coord.getCoords);
+
+//9 - Classe com Interface
+
+interface showTitle {
+    itemTitle(): string;
+}
+
+class BlogPost implements showTitle{
+    title;
+    constructor(title: string){
+        this.title = title;
+    }
+
+    itemTitle(): string {
+        return `O titulo do item é: ${this.title}`
+    }
+}
+
+class TestingInterface implements showTitle{
+    title;
+    constructor(title: string){
+        this.title = title;
+    }
+
+    itemTitle(): string {
+        return `O titulo é: ${this.title}`
+    }
+}
+
+const post = new BlogPost("Hello world");
+
+console.log(post.itemTitle());
+
+const testing = new TestingInterface("Testing");
+
+console.log(testing.itemTitle());

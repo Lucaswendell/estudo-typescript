@@ -110,3 +110,23 @@ coord.fillY = 0;
 coord.fillY = 15;
 console.log(coord);
 console.log(coord.getCoords);
+class BlogPost {
+    constructor(title) {
+        this.title = title;
+    }
+    itemTitle() {
+        return `O titulo do item é: ${this.title}`;
+    }
+}
+class TestingInterface {
+    constructor(title) {
+        this.title = title;
+    }
+    itemTitle() {
+        return `O titulo é: ${this.title}`;
+    }
+}
+const post = new BlogPost("Hello world");
+console.log(post.itemTitle());
+const testing = new TestingInterface("Testing");
+console.log(testing.itemTitle());
