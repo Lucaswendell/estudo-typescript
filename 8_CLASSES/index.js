@@ -71,3 +71,16 @@ const volvo = new Truck("Volvo", 400);
 volvo.showDetails();
 const scania = new Truck("Scania", 500);
 scania.showDetails();
+//7 - getters
+class Person {
+    constructor(name, surname) {
+        this.name = name;
+        this.surname = name;
+    }
+    get fullName() {
+        return `${this.name} ${this.surname}`;
+    }
+}
+const lucasWendel = new Person("Lucas", "Costa");
+console.log(lucasWendel.name);
+console.log(lucasWendel.fullName);
