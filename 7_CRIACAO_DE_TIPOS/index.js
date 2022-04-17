@@ -45,3 +45,12 @@ console.log(showCharacter(myCharacter, "name"));
 const userName = "Lucas";
 const userName2 = "Wendel";
 const userName4 = "Joaquim";
+const newTrunk = {
+    km: 1000,
+    kg: 5000,
+    description: "Pouca carga"
+};
+function showKm(km) {
+    console.log(`O veilo tem a km de: ${km}`);
+}
+showKm(newTrunk.kg);

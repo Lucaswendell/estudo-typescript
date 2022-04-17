@@ -80,3 +80,23 @@ const userName2: typeof userName = "Wendel";
 type x = typeof userName;
 
 const userName4: x = "Joaquim";
+
+//7 - Indexed access type
+type Truck = {km: number, kg: number, description: string}
+
+type km = Truck['km']; //pega uma chave especifica
+
+const newTrunk: Truck = {
+    km: 1000,
+    kg: 5000,
+    description: "Pouca carga"
+}
+
+function showKm(km: km){
+    console.log(`O veilo tem a km de: ${km}`);
+}
+
+showKm(newTrunk.kg);
+
+
+
