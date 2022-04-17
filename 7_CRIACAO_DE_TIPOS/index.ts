@@ -113,3 +113,17 @@ interface Teste {
 }
 
 type myTypeB = Teste extends {showName(): string} ? string : boolean;
+
+//9 - template literals type
+type testeA = "teste";
+
+type CustomType = `some ${testeA}`;
+
+const testing: CustomType = "some teste";
+// const testing2: CustomType = "some teste 2";
+
+type a1 = "teste";
+type a2 = "Union";
+
+type a3 = `${a1}` | `${a2}`;
+
