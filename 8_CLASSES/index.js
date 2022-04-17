@@ -28,3 +28,19 @@ const fusca = new Car("Fusca");
 // fusca.wheels = 5;
 console.log(fusca);
 fusca.name = "Fusca Turbo";
+//6 - herança e super
+class Machine {
+    constructor(name) {
+        this.name = name;
+    }
+}
+const trator = new Machine("Trator");
+class KillerMachine extends Machine {
+    constructor(name, guns) {
+        super(name);
+        this.guns = guns;
+    }
+}
+const destroyer = new KillerMachine("Destroyer", 4);
+console.log(trator);
+console.log(destroyer);
