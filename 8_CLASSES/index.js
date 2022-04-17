@@ -130,3 +130,15 @@ const post = new BlogPost("Hello world");
 console.log(post.itemTitle());
 const testing = new TestingInterface("Testing");
 console.log(testing.itemTitle());
+//10 - override de metodos
+class Base {
+    showMethod() {
+        console.log("Alguma coisa");
+    }
+}
+class Nova extends Base {
+    showMethod() {
+        console.log("Outra coisa");
+    }
+}
+new Nova().showMethod();
