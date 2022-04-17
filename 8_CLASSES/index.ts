@@ -126,3 +126,39 @@ const lucasWendel = new Person("Lucas", "Costa");
 
 console.log(lucasWendel.name);
 console.log(lucasWendel.fullName);
+
+//8 - setter
+class Coords {
+    x!: number;
+    y!: number;
+
+    set fillX(x: number){
+        if(x === 0){
+            return;
+        }
+
+        this.x = x;
+        console.log("X inserido com sucesso");
+    }
+    
+    set fillY(y: number){
+        if(y === 0){
+            return;
+        }
+
+        this.y = y;
+        console.log("Y inserido com sucesso");
+    }
+
+    get getCoords(){
+        return `X: ${this.x} e Y: ${this.y}`; 
+    }
+}
+
+const coord = new Coords();
+coord.fillX = 5;
+coord.fillY = 0;
+coord.fillY = 15;
+
+console.log(coord);
+console.log(coord.getCoords);
