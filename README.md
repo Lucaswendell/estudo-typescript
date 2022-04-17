@@ -3,6 +3,9 @@
 ### compilar o ts
     tsc nomearquivo.ts
 
+### compilar atutomaticamente
+    tsc -w
+
 ### Type inference
      let teste = ""
     
@@ -11,7 +14,3 @@
 
 ### gerar arquivo de configuração
     tsc --init
-
-### compilar atutomaticamente
-    tsc -w
-
