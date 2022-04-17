@@ -98,5 +98,18 @@ function showKm(km: km){
 
 showKm(newTrunk.kg);
 
+//8 - Conditional types
+interface A { }
 
+interface B extends A{}
 
+type myType = B extends A ? number : string;
+
+const somarVar: myType = 5;
+// const somarVar2: myType = "teste";
+
+interface Teste {
+    showName(): string
+}
+
+type myTypeB = Teste extends {showName(): string} ? string : boolean;
