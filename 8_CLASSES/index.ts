@@ -44,7 +44,7 @@ const fusca = new Car("Fusca");
 console.log(fusca)
 fusca.name = "Fusca Turbo";
 
-//6 - herança e super
+//4 - herança e super
 
 class Machine {
     name;
@@ -67,7 +67,7 @@ const destroyer = new KillerMachine("Destroyer", 4);
 console.log(trator);
 console.log(destroyer)
 
-//7 - metodos
+//5 - metodos
 
 class Dwarf{
     name;
@@ -86,3 +86,24 @@ console.log(jimmy.name);
 jimmy.greeting();
 
 console.log(jimmy);
+
+
+//6 - this
+class Truck {
+    model;
+    hp;
+    constructor(model: string, hp: number){
+        this.model = model;
+        this.hp = hp;
+    }
+
+    showDetails(){
+        console.log(`Caminhão modelo: ${this.model}, que tem ${this.hp} cavalos de potencia`);
+    }
+}
+
+const volvo = new Truck("Volvo", 400);
+volvo.showDetails();
+
+const scania = new Truck("Scania", 500);
+scania.showDetails();
