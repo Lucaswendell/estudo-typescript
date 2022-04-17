@@ -27,4 +27,19 @@ class NewUser {
 const joao = new NewUser("João", 22);
 console.log(joao);
 
-// const pedro = new NewUser("Pedro", 12)
+// const pedro = new NewUser("Pedro", 12);
+
+//3 - campo readonly
+class Car {
+    name;
+    readonly wheels = 4;
+
+    constructor(name: string){
+        this.name = name;
+    }
+}
+
+const fusca = new Car("Fusca");
+// fusca.wheels = 5;
+console.log(fusca)
+fusca.name = "Fusca Turbo";
