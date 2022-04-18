@@ -1,2 +1,2 @@
 #!/bin/bash
-tsc -w $1/index.ts
+tsc -w $1/*.ts --pretty
