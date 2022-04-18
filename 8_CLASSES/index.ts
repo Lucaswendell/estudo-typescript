@@ -306,3 +306,24 @@ console.log(typeof newItem.first);
 const secondItem = new Item(12, true);
 console.log(secondItem.showFirst)
 console.log(typeof secondItem.first);
+
+//16 - parameter properties
+class ParameterPorperties {
+    constructor(public name: string, private qty: number, private price: number){
+        this.name = name;
+        this.price = price;
+        this.qty = qty;
+    }
+
+    get showQty(){
+        return `A quantidade é ${this.qty}`;
+    }
+
+    get showPrice(){
+        return `O total é ${this.price.toLocaleString()}`;
+    }
+}
+const newShirt = new ParameterPorperties("Shirt", 10, 19.99)
+console.log(newShirt.name)
+console.log(newShirt.showQty)
+console.log(newShirt.showPrice)
