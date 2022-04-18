@@ -1,6 +1,7 @@
 {
     "scripts": {
         "compile": "./compile.sh",
-        "commit": "git add . && git commit -m $1"
+        "commit": "git add . && git commit -m $1",
+        "push": "git push origin master"
     }
 }

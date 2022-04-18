@@ -20,3 +20,12 @@ console.log(myNumbers);
 var x1 = myNumbers.n1;
 console.log(x1);
 myNumbers.showNumber();
+var User = /** @class */ (function () {
+    function User(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+    return User;
+}());
+var joaquim = new User("Joaquim", 22);
+console.log(joaquim);
