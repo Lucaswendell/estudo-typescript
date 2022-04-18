@@ -249,3 +249,24 @@ class F extends E{
 const fInstance = new F();
 fInstance.showX()
 fInstance.showProtectedMethod();
+
+//13 - private
+class PrivateClass {
+    private name = "Private";
+
+    showName(){
+        return this.name;
+    }
+
+    private privateMethod() {
+        console.log("Private method");
+    }
+
+    showPrivateMethod(){
+        this.privateMethod();
+    }
+}
+const pObj = new PrivateClass();
+//console.log(pObj.name);
+console.log(pObj.showName());
+pObj.showPrivateMethod();
