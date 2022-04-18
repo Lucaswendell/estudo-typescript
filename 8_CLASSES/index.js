@@ -142,7 +142,7 @@ class Nova extends Base {
     }
 }
 new Nova().showMethod();
-//public 
+//11 - public 
 class C {
     constructor() {
         this.x = 10;
@@ -154,3 +154,23 @@ const cInstance = new C();
 console.log(cInstance.x);
 const dInstance = new D();
 console.log(dInstance.x);
+//12 - protected
+class E {
+    constructor() {
+        this.x = 10;
+    }
+    protectedMethod() {
+        console.log("Metodo protected");
+    }
+}
+class F extends E {
+    showX() {
+        console.log(`X: ${this.x}`);
+    }
+    showProtectedMethod() {
+        this.protectedMethod();
+    }
+}
+const fInstance = new F();
+fInstance.showX();
+fInstance.showProtectedMethod();
