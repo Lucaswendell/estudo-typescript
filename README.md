@@ -14,7 +14,11 @@
 
 ### push com npm
     npm run push
+
+### criar modulos com npm
+    npm run criar_modulo -- <NOVO_MODULO> <MODULO_BASE>
     
+
 ### Type inference
      let teste = ""
     

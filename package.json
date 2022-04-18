@@ -2,6 +2,7 @@
     "scripts": {
         "compile": "./compile.sh",
         "commit": "git add . && git commit -m $1",
-        "push": "git push origin master"
+        "push": "git push origin master",
+        "criar_modulo": "./criar_modulos.sh"
     }
 }
