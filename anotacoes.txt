@@ -1,6 +1,12 @@
 -- compilar o ts
     tsc nomearquivo.ts
 
+-- compilar atutomaticamente
+    tsc -w
+
+-- compilar com npm
+    npm run compile -- <pasta>
+
 -- Type inference
     let teste = ""
 -- Type annotation
@@ -9,6 +15,4 @@
 -- gerar arquivo de configuração
     tsc --init
 
--- compilar atutomaticamente
-    tsc -w
 
