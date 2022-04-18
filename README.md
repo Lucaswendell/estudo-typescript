@@ -6,6 +6,9 @@
 ### compilar atutomaticamente
     tsc -w
 
+### compilar com npm
+    npm run compile -- <pasta>
+    
 ### Type inference
      let teste = ""
     
