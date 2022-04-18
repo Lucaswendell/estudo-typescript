@@ -14,3 +14,9 @@ console.log(multiple_1.b);
 //4 - alias
 var changename_1 = require("./changename");
 console.log(changename_1.someName);
+//5 - importando tudo
+var myNumbers = require("./numbers");
+console.log(myNumbers);
+var x1 = myNumbers.n1;
+console.log(x1);
+myNumbers.showNumber();

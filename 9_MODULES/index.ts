@@ -16,3 +16,12 @@ myFunction();
 //4 - alias
 import { someName as name } from "./changename";
 console.log(name);
+
+//5 - importando tudo
+import * as myNumbers from './numbers';
+console.log(myNumbers);
+
+const x1 = myNumbers.n1;
+console.log(x1)
+
+myNumbers.showNumber();
