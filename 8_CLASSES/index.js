@@ -262,3 +262,9 @@ class AbstractExample extends AbstractClass {
     }
 }
 new AbstractExample("Jeremias").showName();
+// 18 - relação entre classes
+class Dog {
+}
+class Cat {
+}
+const dog = new Cat();
