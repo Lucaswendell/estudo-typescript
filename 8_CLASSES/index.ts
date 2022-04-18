@@ -1,7 +1,7 @@
 //1 - campos em classe
-class User{
-    name!: string;
-    age!: number;
+class User {
+  name!: string;
+  age!: number;
 }
 
 const lucas = new User();
@@ -15,13 +15,13 @@ console.log(lucas);
 
 //2 - constructor
 class NewUser {
-    name;
-    age;
+  name;
+  age;
 
-    constructor(name: string, age: number){
-        this.name = name;
-        this.age = age;
-    }
+  constructor(name: string, age: number) {
+    this.name = name;
+    this.age = age;
+  }
 }
 
 const joao = new NewUser("João", 22);
@@ -31,53 +31,53 @@ console.log(joao);
 
 //3 - campo readonly
 class Car {
-    name;
-    readonly wheels = 4;
+  name;
+  readonly wheels = 4;
 
-    constructor(name: string){
-        this.name = name;
-    }
+  constructor(name: string) {
+    this.name = name;
+  }
 }
 
 const fusca = new Car("Fusca");
 // fusca.wheels = 5;
-console.log(fusca)
+console.log(fusca);
 fusca.name = "Fusca Turbo";
 
 //4 - herança e super
 
 class Machine {
-    name;
-    constructor(name: string){
-        this.name = name;
-    }
+  name;
+  constructor(name: string) {
+    this.name = name;
+  }
 }
 
 const trator = new Machine("Trator");
 
-class KillerMachine extends Machine{
-    guns;
-    constructor(name: string, guns: number){
-        super(name);
-        this.guns = guns;
-    }
+class KillerMachine extends Machine {
+  guns;
+  constructor(name: string, guns: number) {
+    super(name);
+    this.guns = guns;
+  }
 }
 
 const destroyer = new KillerMachine("Destroyer", 4);
 console.log(trator);
-console.log(destroyer)
+console.log(destroyer);
 
 //5 - metodos
 
-class Dwarf{
-    name;
-    constructor(name: string){
-        this.name = name;
-    }
+class Dwarf {
+  name;
+  constructor(name: string) {
+    this.name = name;
+  }
 
-    greeting(){
-        console.log("Hey stranger!");
-    }
+  greeting() {
+    console.log("Hey stranger!");
+  }
 }
 
 const jimmy = new Dwarf("Jimmy");
@@ -87,19 +87,20 @@ jimmy.greeting();
 
 console.log(jimmy);
 
-
 //6 - this
 class Truck {
-    model;
-    hp;
-    constructor(model: string, hp: number){
-        this.model = model;
-        this.hp = hp;
-    }
+  model;
+  hp;
+  constructor(model: string, hp: number) {
+    this.model = model;
+    this.hp = hp;
+  }
 
-    showDetails(){
-        console.log(`Caminhão modelo: ${this.model}, que tem ${this.hp} cavalos de potencia`);
-    }
+  showDetails() {
+    console.log(
+      `Caminhão modelo: ${this.model}, que tem ${this.hp} cavalos de potencia`
+    );
+  }
 }
 
 const volvo = new Truck("Volvo", 400);
@@ -110,16 +111,16 @@ scania.showDetails();
 
 //7 - getters
 class Person {
-    name;
-    surname;
-    constructor(name: string, surname: string){
-        this.name = name;
-        this.surname = name;
-    }
+  name;
+  surname;
+  constructor(name: string, surname: string) {
+    this.name = name;
+    this.surname = name;
+  }
 
-    get fullName(){
-        return `${this.name} ${this.surname}`;
-    }
+  get fullName() {
+    return `${this.name} ${this.surname}`;
+  }
 }
 
 const lucasWendel = new Person("Lucas", "Costa");
@@ -129,30 +130,30 @@ console.log(lucasWendel.fullName);
 
 //8 - setter
 class Coords {
-    x!: number;
-    y!: number;
+  x!: number;
+  y!: number;
 
-    set fillX(x: number){
-        if(x === 0){
-            return;
-        }
-
-        this.x = x;
-        console.log("X inserido com sucesso");
-    }
-    
-    set fillY(y: number){
-        if(y === 0){
-            return;
-        }
-
-        this.y = y;
-        console.log("Y inserido com sucesso");
+  set fillX(x: number) {
+    if (x === 0) {
+      return;
     }
 
-    get getCoords(){
-        return `X: ${this.x} e Y: ${this.y}`; 
+    this.x = x;
+    console.log("X inserido com sucesso");
+  }
+
+  set fillY(y: number) {
+    if (y === 0) {
+      return;
     }
+
+    this.y = y;
+    console.log("Y inserido com sucesso");
+  }
+
+  get getCoords() {
+    return `X: ${this.x} e Y: ${this.y}`;
+  }
 }
 
 const coord = new Coords();
@@ -166,29 +167,29 @@ console.log(coord.getCoords);
 //9 - Classe com Interface
 
 interface showTitle {
-    itemTitle(): string;
+  itemTitle(): string;
 }
 
-class BlogPost implements showTitle{
-    title;
-    constructor(title: string){
-        this.title = title;
-    }
+class BlogPost implements showTitle {
+  title;
+  constructor(title: string) {
+    this.title = title;
+  }
 
-    itemTitle(): string {
-        return `O titulo do item é: ${this.title}`
-    }
+  itemTitle(): string {
+    return `O titulo do item é: ${this.title}`;
+  }
 }
 
-class TestingInterface implements showTitle{
-    title;
-    constructor(title: string){
-        this.title = title;
-    }
+class TestingInterface implements showTitle {
+  title;
+  constructor(title: string) {
+    this.title = title;
+  }
 
-    itemTitle(): string {
-        return `O titulo é: ${this.title}`
-    }
+  itemTitle(): string {
+    return `O titulo é: ${this.title}`;
+  }
 }
 
 const post = new BlogPost("Hello world");
@@ -201,25 +202,25 @@ console.log(testing.itemTitle());
 
 //10 - override de metodos
 class Base {
-    showMethod(){
-        console.log("Alguma coisa");
-    }
+  showMethod() {
+    console.log("Alguma coisa");
+  }
 }
 
-class Nova extends Base{
-    showMethod() {
-        console.log("Outra coisa")
-    }
+class Nova extends Base {
+  showMethod() {
+    console.log("Outra coisa");
+  }
 }
 
-new Nova().showMethod()
+new Nova().showMethod();
 
-//11 - public 
+//11 - public
 class C {
-    public x = 10;
+  public x = 10;
 }
 
-class D extends C{ }
+class D extends C {}
 
 const cInstance = new C();
 console.log(cInstance.x);
@@ -229,42 +230,41 @@ console.log(dInstance.x);
 //12 - protected
 
 class E {
-    protected x = 10;
+  protected x = 10;
 
-    protected protectedMethod(){
-        console.log("Metodo protected");
-    }
-    
+  protected protectedMethod() {
+    console.log("Metodo protected");
+  }
 }
 
-class F extends E{
-    showX(){
-        console.log(`X: ${this.x}`);
-    }
+class F extends E {
+  showX() {
+    console.log(`X: ${this.x}`);
+  }
 
-    showProtectedMethod(){
-        this.protectedMethod();
-    }
+  showProtectedMethod() {
+    this.protectedMethod();
+  }
 }
 const fInstance = new F();
-fInstance.showX()
+fInstance.showX();
 fInstance.showProtectedMethod();
 
 //13 - private
 class PrivateClass {
-    private name = "Private";
+  private name = "Private";
 
-    showName(){
-        return this.name;
-    }
+  showName() {
+    return this.name;
+  }
 
-    private privateMethod() {
-        console.log("Private method");
-    }
+  private privateMethod() {
+    console.log("Private method");
+  }
 
-    showPrivateMethod(){
-        this.privateMethod();
-    }
+  showPrivateMethod() {
+    this.privateMethod();
+  }
 }
 const pObj = new PrivateClass();
 //console.log(pObj.name);
@@ -273,69 +273,88 @@ pObj.showPrivateMethod();
 
 //14 - static members
 class StaticMember {
-   static prop = "Testing static";
+  static prop = "Testing static";
 
-   static staticMethods(){
-       console.log("Este é um metodo estatico");
-   }
+  static staticMethods() {
+    console.log("Este é um metodo estatico");
+  }
 }
 
-console.log(StaticMember.prop)
+console.log(StaticMember.prop);
 StaticMember.staticMethods();
 
 //15 - generics class
-class Item<T, U>{
-    first;
-    second;
+class Item<T, U> {
+  first;
+  second;
 
-    constructor(first: T, second: U){
-        this.first = first;
-        this.second = second;
-    }
+  constructor(first: T, second: U) {
+    this.first = first;
+    this.second = second;
+  }
 
-    get showFirst(){
-        return `O first é: ${this.first}`;
-    }
+  get showFirst() {
+    return `O first é: ${this.first}`;
+  }
 }
 
 const newItem = new Item("Primeiro", "Segundo");
-console.log(newItem)
-console.log(newItem.showFirst)
+console.log(newItem);
+console.log(newItem.showFirst);
 console.log(typeof newItem.first);
 
 const secondItem = new Item(12, true);
-console.log(secondItem.showFirst)
+console.log(secondItem.showFirst);
 console.log(typeof secondItem.first);
 
 //16 - parameter properties
 class ParameterPorperties {
-    constructor(public name: string, private qty: number, private price: number){
-        this.name = name;
-        this.price = price;
-        this.qty = qty;
-    }
+  constructor(public name: string, private qty: number, private price: number) {
+    this.name = name;
+    this.price = price;
+    this.qty = qty;
+  }
 
-    get showQty(){
-        return `A quantidade é ${this.qty}`;
-    }
+  get showQty() {
+    return `A quantidade é ${this.qty}`;
+  }
 
-    get showPrice(){
-        return `O total é ${this.price.toLocaleString()}`;
-    }
+  get showPrice() {
+    return `O total é ${this.price.toLocaleString()}`;
+  }
 }
-const newShirt = new ParameterPorperties("Shirt", 10, 19.99)
-console.log(newShirt.name)
-console.log(newShirt.showQty)
-console.log(newShirt.showPrice)
+const newShirt = new ParameterPorperties("Shirt", 10, 19.99);
+console.log(newShirt.name);
+console.log(newShirt.showQty);
+console.log(newShirt.showPrice);
 
 //17 - class expression
-const myClass = class<T>{
-    name;
-    constructor(name: T){
-        this.name = name;
-    }
-}
+const myClass = class<T> {
+  name;
+  constructor(name: T) {
+    this.name = name;
+  }
+};
 
 const person = new myClass("Lucas");
 console.log(person);
 console.log(person.name);
+
+// 17 - abstract class
+abstract class AbstractClass {
+  abstract showName(): void;
+}
+
+class AbstractExample extends AbstractClass {
+  name;
+  constructor(name: string) {
+    super();
+    this.name = name;
+  }
+
+  showName(): void {
+    console.log(this.name);
+  }
+}
+
+new AbstractExample("Jeremias").showName();

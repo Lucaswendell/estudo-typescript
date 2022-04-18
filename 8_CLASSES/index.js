@@ -142,7 +142,7 @@ class Nova extends Base {
     }
 }
 new Nova().showMethod();
-//11 - public 
+//11 - public
 class C {
     constructor() {
         this.x = 10;
@@ -249,3 +249,16 @@ const myClass = class {
 const person = new myClass("Lucas");
 console.log(person);
 console.log(person.name);
+// 17 - abstract class
+class AbstractClass {
+}
+class AbstractExample extends AbstractClass {
+    constructor(name) {
+        super();
+        this.name = name;
+    }
+    showName() {
+        console.log(this.name);
+    }
+}
+new AbstractExample("Jeremias").showName();
