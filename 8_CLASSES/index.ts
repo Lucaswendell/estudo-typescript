@@ -282,3 +282,27 @@ class StaticMember {
 
 console.log(StaticMember.prop)
 StaticMember.staticMethods();
+
+//15 - generics class
+class Item<T, U>{
+    first;
+    second;
+
+    constructor(first: T, second: U){
+        this.first = first;
+        this.second = second;
+    }
+
+    get showFirst(){
+        return `O first é: ${this.first}`;
+    }
+}
+
+const newItem = new Item("Primeiro", "Segundo");
+console.log(newItem)
+console.log(newItem.showFirst)
+console.log(typeof newItem.first);
+
+const secondItem = new Item(12, true);
+console.log(secondItem.showFirst)
+console.log(typeof secondItem.first);
