@@ -1,5 +1,6 @@
 {
     "scripts": {
-        "compile": "./compile.sh"
+        "compile": "./compile.sh",
+        "commit": "git add . && git commit -m $1"
     }
 }
