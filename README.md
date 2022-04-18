@@ -9,6 +9,12 @@
 ### compilar com npm
     npm run compile -- <pasta>
     
+### comitar com npm
+    npm run commit -- <mensagem>
+
+### push com npm
+    npm run push
+    
 ### Type inference
      let teste = ""
     
