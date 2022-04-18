@@ -240,3 +240,12 @@ const newShirt = new ParameterPorperties("Shirt", 10, 19.99);
 console.log(newShirt.name);
 console.log(newShirt.showQty);
 console.log(newShirt.showPrice);
+//17 - class expression
+const myClass = class {
+    constructor(name) {
+        this.name = name;
+    }
+};
+const person = new myClass("Lucas");
+console.log(person);
+console.log(person.name);
