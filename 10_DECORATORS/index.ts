@@ -151,3 +151,32 @@ class ID {
 
 const id = new ID("1");
 console.log(id)
+
+//7 - exemplo real com class decorator
+function createdDate(created: Function){
+  created.prototype.createdAt = new Date();
+}
+
+@createdDate
+class Book {
+  id;
+  createdAt?: Date;
+
+  constructor(id: number){
+    this.id = id;
+  }
+}
+
+@createdDate
+class Pen {
+  id;
+  constructor(id: number){
+    this.id = id;
+  }
+}
+
+const book = new Book(1);
+const pen = new Pen(1);
+console.log(book)
+console.log(pen)
+console.log(book.createdAt)

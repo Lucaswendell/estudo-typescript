@@ -147,3 +147,30 @@ __decorate([
 ], ID.prototype, "id", void 0);
 const id = new ID("1");
 console.log(id);
+//7 - exemplo real com class decorator
+function createdDate(created) {
+    created.prototype.createdAt = new Date();
+}
+let Book = class Book {
+    constructor(id) {
+        this.id = id;
+    }
+};
+Book = __decorate([
+    createdDate,
+    __metadata("design:paramtypes", [Number])
+], Book);
+let Pen = class Pen {
+    constructor(id) {
+        this.id = id;
+    }
+};
+Pen = __decorate([
+    createdDate,
+    __metadata("design:paramtypes", [Number])
+], Pen);
+const book = new Book(1);
+const pen = new Pen(1);
+console.log(book);
+console.log(pen);
+console.log(book.createdAt);
