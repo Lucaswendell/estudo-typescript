@@ -121,3 +121,33 @@ class Monster{
 }
 
 console.log(new Monster("Charmander", 10))
+
+//6 - property decorator
+function formatNumber(){
+  return function(target: Object, propertyKey: string){
+    let value: string;
+
+    const getter = function(){
+      return value;
+    }
+
+    const setter = function(newValue: string){
+      value = newValue.padStart(5,'0');
+    }
+
+    Object.defineProperty(target, propertyKey, {
+      set: setter,
+      get: getter
+    })
+  }
+}
+class ID {
+  @formatNumber()
+  id;
+  constructor(id: string){
+    this.id = id;
+  }
+}
+
+const id = new ID("1");
+console.log(id)

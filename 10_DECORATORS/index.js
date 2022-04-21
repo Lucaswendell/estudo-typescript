@@ -120,3 +120,30 @@ __decorate([
     __metadata("design:paramtypes", [])
 ], Monster.prototype, "showAge", null);
 console.log(new Monster("Charmander", 10));
+//6 - property decorator
+function formatNumber() {
+    return function (target, propertyKey) {
+        let value;
+        const getter = function () {
+            return value;
+        };
+        const setter = function (newValue) {
+            value = newValue.padStart(5, '0');
+        };
+        Object.defineProperty(target, propertyKey, {
+            set: setter,
+            get: getter
+        });
+    };
+}
+class ID {
+    constructor(id) {
+        this.id = id;
+    }
+}
+__decorate([
+    formatNumber(),
+    __metadata("design:type", Object)
+], ID.prototype, "id", void 0);
+const id = new ID("1");
+console.log(id);
