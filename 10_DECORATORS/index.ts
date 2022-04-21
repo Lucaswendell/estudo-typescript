@@ -152,7 +152,7 @@ class ID {
 const id = new ID("1");
 console.log(id)
 
-//7 - exemplo real com class decorator
+//7 - exemplo com class decorator
 function createdDate(created: Function){
   created.prototype.createdAt = new Date();
 }
@@ -180,3 +180,32 @@ const pen = new Pen(1);
 console.log(book)
 console.log(pen)
 console.log(book.createdAt)
+
+//8 - Exemplo com method decorator
+function checkIfuserPosted(){
+  return (target: Object, key: string | Symbol, descriptor: PropertyDescriptor) => {
+    const childFunction = descriptor.value;
+    descriptor.value = function (...args: any[]) {
+      if(args[1] === true){
+        console.log("Usuário já postou");
+      }else{
+        return childFunction.apply(this, args)
+      }
+    }
+
+    return descriptor;
+  }
+}
+class Post {
+  alreadyPosted = false;
+
+  @checkIfuserPosted()
+  post(content: string, alreadyPosted: boolean){
+    this.alreadyPosted = true;
+    console.log(content);
+  }
+}
+
+const newPost = new Post();
+newPost.post("Primeiro post", newPost.alreadyPosted);
+newPost.post("Segundo post", newPost.alreadyPosted);
