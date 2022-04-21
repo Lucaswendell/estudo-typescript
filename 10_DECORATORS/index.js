@@ -207,3 +207,36 @@ __decorate([
 const newPost = new Post();
 newPost.post("Primeiro post", newPost.alreadyPosted);
 newPost.post("Segundo post", newPost.alreadyPosted);
+//9 - Exemplo com property decorator
+function Max(limit) {
+    return (target, propertyKey) => {
+        let value;
+        const getter = () => {
+            return value;
+        };
+        const setter = (newVal) => {
+            if (newVal.length > limit) {
+                console.log(`Limite atingido. ${newVal.length} - ${limit}`);
+            }
+            else {
+                value = newVal;
+            }
+        };
+        Object.defineProperty(target, propertyKey, {
+            get: getter,
+            set: setter
+        });
+    };
+}
+class Admin {
+    constructor(username) {
+        this.username = username;
+    }
+}
+__decorate([
+    Max(10),
+    __metadata("design:type", Object)
+], Admin.prototype, "username", void 0);
+// const input = prompt("Digite um nome") || "";
+const admin = new Admin("pedroadmin12345");
+const eu = new Admin("lucas");

@@ -209,3 +209,37 @@ class Post {
 const newPost = new Post();
 newPost.post("Primeiro post", newPost.alreadyPosted);
 newPost.post("Segundo post", newPost.alreadyPosted);
+
+//9 - Exemplo com property decorator
+function Max(limit: Number){
+  return (target: Object, propertyKey: string) => {
+    let value:string;
+    const getter = () => {
+      return value;
+    }
+
+    const setter = (newVal: string) => {
+      if(newVal.length > limit){
+        console.log(`Limite atingido. ${newVal.length} - ${limit}`);
+      }else{
+        value = newVal;
+      }
+    }
+
+    Object.defineProperty(target, propertyKey, {
+      get: getter,
+      set: setter
+    })
+  }
+}
+class Admin {
+  @Max(10)
+  username;
+  constructor(username: string){
+    this.username = username;
+  }
+}
+
+// const input = prompt("Digite um nome") || "";
+const admin = new Admin("pedroadmin12345");
+const eu = new Admin("lucas");
