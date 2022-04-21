@@ -96,3 +96,27 @@ __decorate([
     __metadata("design:returntype", void 0)
 ], Machine.prototype, "showName", null);
 new Machine("Trator").showName();
+//5 - Acessor decorator(Apenas set e get)
+class Monster {
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+    get showName() {
+        return this.name;
+    }
+    get showAge() {
+        return this.age;
+    }
+}
+__decorate([
+    enumerable(false),
+    __metadata("design:type", Object),
+    __metadata("design:paramtypes", [])
+], Monster.prototype, "showName", null);
+__decorate([
+    enumerable(true),
+    __metadata("design:type", Object),
+    __metadata("design:paramtypes", [])
+], Monster.prototype, "showAge", null);
+console.log(new Monster("Charmander", 10));

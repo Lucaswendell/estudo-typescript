@@ -99,3 +99,25 @@ class Machine{
 }
 
 new Machine("Trator").showName();
+
+//5 - Acessor decorator(Apenas set e get)
+class Monster{
+  name?;
+  age?;
+  constructor(name: string, age: Number){
+    this.name = name;
+    this.age = age;
+  }
+
+  @enumerable(false)
+  get showName(){
+    return this.name;
+  }
+
+  @enumerable(true)
+  get showAge(){
+    return this.age;
+  }
+}
+
+console.log(new Monster("Charmander", 10))
