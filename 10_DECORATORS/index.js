@@ -56,4 +56,21 @@ __decorate([
     __metadata("design:returntype", void 0)
 ], MultipleDecorators.prototype, "testing", null);
 new MultipleDecorators().testing();
-//3
+//3 - Class decorator
+function classDec(constructor) {
+    console.log(constructor);
+    if (constructor.name === "User") {
+        console.log("Criando usuario.");
+    }
+}
+let User = class User {
+    constructor(name) {
+        this.name = name;
+    }
+};
+User = __decorate([
+    classDec,
+    __metadata("design:paramtypes", [String])
+], User);
+const lucas = new User("Lucas");
+console.log(lucas);
