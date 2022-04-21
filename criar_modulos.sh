@@ -1,2 +1,7 @@
 #!/bin/bash
-mkdir ./$1 && cp  ./$2/* ./$1
+mkdir ./$1 
+
+if [ -n "$2" ]
+then
+    cp  ./$2/* ./$1
+fi
