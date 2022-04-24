@@ -10,6 +10,8 @@ import Destructuring, {Category} from './components/Destructing';
 //6 - hook useState
 import State from './components/State';
 
+//9 - types
+type textOrNull = string | null;
 
 function App() {
 
@@ -22,6 +24,12 @@ function App() {
   const userGreeting = (name: string): string => {
     return `Olá, ${name}!`;
   }
+
+
+  //9 - type
+  const myText: textOrNull = "Tem texto";
+  let mySecondText = null;
+  // mySecondText = "Tem texto";
 
   return (
     <div className="App">
@@ -48,6 +56,10 @@ function App() {
         />
 
       <State />
+
+
+      {myText && <p>Tem texto aqui</p>}
+      {mySecondText && <p>Tem texto aqui</p>}
     </div>
   );
 }
