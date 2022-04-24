@@ -5,7 +5,11 @@ import FirstComponent from './components/FirstComponent';
 
 //5 - desestruturando props
 import SecondComponent from './components/SecondComponent';
-import { Destructuring } from './components/Destructing';
+import Destructuring from './components/Destructing';
+
+//6 - hook useState
+import State from './components/State';
+
 
 function App() {
 
@@ -30,6 +34,8 @@ function App() {
       <SecondComponent name="Segundo"/>
       <Destructuring title="Primeiro post" content='algum conteudo' commentQty={3} tags={["js", "ts"]}/>
       <Destructuring title="Segundo post" content='algum conteudo' commentQty={3} tags={["ts"]}/>
+
+      <State />
     </div>
   );
 }

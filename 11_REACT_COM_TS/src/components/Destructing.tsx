@@ -1,13 +1,13 @@
 import * as React from 'react';
 
-export interface IDestructuringProps {
+interface IDestructuringProps {
     title: string;
     content: string;
     commentQty: number,
     tags: string[]
 }
 
-export function Destructuring ({ title, content, commentQty,tags }: IDestructuringProps) {
+export default function Destructuring ({ title, content, commentQty,tags }: IDestructuringProps) {
   return (
     <div>
       <h2>{title}</h2>
