@@ -38,12 +38,30 @@ app.get("/api/interfaces", (req: Request, res: Response) => {
 
 //6 - enviando json
 app.get("/api/json", (req: Request, res: Response) => {
-    return res.json({
-        name: "Shirt",
-        price: 30.00,
-        color: "Blue",
-        sizes: ["P", "M", "G"]
-    });
+  return res.json({
+    name: "Shirt",
+    price: 30.0,
+    color: "Blue",
+    sizes: ["P", "M", "G"],
+  });
+});
+
+// 7 - router parameters
+app.get("/api/product/:id", (req: Request, res: Response) => {
+  console.log(req.params);
+
+  const id = Number(req.params.id);
+
+  if (!isNaN(id)) {
+    const product = {
+      id,
+      name: `Boné - ${id}`,
+      price: Number((id * 1.9).toFixed(2)),
+    };
+    return res.json(product);
+  } else {
+    return res.send("Produto não encontrado");
+  }
 });
 
 app.listen(3000, () => {
