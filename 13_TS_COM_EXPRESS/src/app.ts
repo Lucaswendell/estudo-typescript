@@ -2,7 +2,7 @@
 //console.log("Express com TS");
 
 // 2 - init express
-import express, { Request, Response } from "express";
+import express, { Request, Response, NextFunction } from "express";
 const app = express();
 
 //3 - rota com POST
@@ -80,6 +80,20 @@ function getUser(req: Request, res: Response){
     console.log(`Resgatando o usuario com o id: ${req.params.id}`);
     return res.send("Usuario encontrado");
 }
+
+//10 - middleware
+function checkUser(req: Request,res: Response, next: NextFunction){
+    if(req.params.id === '1'){
+        console.log("Pode seguir");
+        next();
+    }else{
+        console.log("Acesso restrito");
+        return res.send("Nope");
+    }
+}
+app.get("/api/user/:id/access",checkUser, (req: Request, res: Response) => {
+    return res.json({msg: "Bem vindo a área administrativa"})
+});
 
 app.listen(3000, () => {
   console.log("Aplicação rodando na 3000");
