@@ -2,7 +2,7 @@
 //console.log("Express com TS");
 
 // 2 - init express
-import express from 'express';
+import express, {Request, Response} from 'express';
 const app = express();
 
 //3 - rota com POST
@@ -29,6 +29,12 @@ app.all("/api/product/check", (req, res) => {
     }else{
         return res.status(405).send("Não realiza operacao.")
     }
+});
+
+
+//5 - Interface do express
+app.get("/api/interfaces", (req: Request, res: Response) => {
+    return res.send("Utilizando interfaces");
 });
 
 app.listen(3000, () => {
