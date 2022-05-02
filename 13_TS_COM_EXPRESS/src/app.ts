@@ -9,6 +9,13 @@ const app = express();
 //middleware para trabalhar com json
 app.use(express.json());
 
+// 11 - middleware para todas as rotas
+function showPath(req: Request, res: Response, next: NextFunction){
+    console.log(req.path);
+    next();
+}
+
+app.use(showPath);
 app.get("/", (req, res) => {
   return res.json("Hello express");
 });
