@@ -73,6 +73,14 @@ app.get("/api/product/:productId/review/:reviewId", (req: Request,res: Response)
     return res.send(`Acessando a review ${reviewId} do produto ${productId}.`);
 });
 
+//9 - router handler
+app.get("/api/user/:id", getUser);
+
+function getUser(req: Request, res: Response){
+    console.log(`Resgatando o usuario com o id: ${req.params.id}`);
+    return res.send("Usuario encontrado");
+}
+
 app.listen(3000, () => {
   console.log("Aplicação rodando na 3000");
 });
