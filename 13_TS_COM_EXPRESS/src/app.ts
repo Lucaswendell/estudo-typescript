@@ -64,6 +64,15 @@ app.get("/api/product/:id", (req: Request, res: Response) => {
   }
 });
 
+//8 - Rotas complexas
+app.get("/api/product/:productId/review/:reviewId", (req: Request,res: Response) => {
+    console.log(req.params);
+
+    const { productId, reviewId } = req.params;
+
+    return res.send(`Acessando a review ${reviewId} do produto ${productId}.`);
+});
+
 app.listen(3000, () => {
   console.log("Aplicação rodando na 3000");
 });
