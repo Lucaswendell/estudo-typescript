@@ -12,7 +12,15 @@
 -- Type annotation
     let teste: string = ""
 
--- gerar arquivo de configuração
+-- Gerar arquivo de configuração
     tsc --init
 
-
+-- Express com ts
+    -- Dependencias Dev
+        @types/express @types/node ts-node-dev typescript
+    --  Dependencias Prod
+        express    
+    -- Rodar projeto
+     "scripts": {
+        "dev": "ts-node-dev --respawn --transpile-only src/app.ts"
+      }
