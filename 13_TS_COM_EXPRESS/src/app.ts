@@ -112,12 +112,21 @@ app.get(
     req: Request<{ id: string; name: string }>,
     res: Response<{ status: boolean }>
   ) => {
-      console.log(`ID: ${req.params.id}`);
-      console.log(`Name: ${req.params.name}`);
+    console.log(`ID: ${req.params.id}`);
+    console.log(`Name: ${req.params.name}`);
 
-      return res.json({status: true});
+    return res.json({ status: true });
   }
 );
+
+//13 - Tratando erros
+app.get("/api/error", (req: Request, res: Response) => {
+  try {
+    throw new Error("Deu erro oh.");
+  } catch (e: any) {
+    return res.status(400).json({ message: e.message });
+  }
+});
 
 app.listen(3000, () => {
   console.log("Aplicação rodando na 3000");
