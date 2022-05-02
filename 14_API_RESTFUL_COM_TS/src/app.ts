@@ -17,10 +17,13 @@ import router from "./router";
 
 app.use("/api/", router);
 
+//logger
+import Logger from "../config/logger";
+
 //app port
 const port = config.get<Number>("port");
 
 app.listen(port, async () => {
     await db();
-    console.log(`porta ${port}`);
+    Logger.info(`porta ${port}`);
 })
