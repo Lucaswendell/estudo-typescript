@@ -3,6 +3,7 @@ import {
   createMovie,
   findMovieById,
   getAllMovies,
+  removeMovie,
 } from "./controllers/MovieControllers";
 
 //validations
@@ -17,4 +18,5 @@ export default router
   })
   .post("/movie", movieCreateValidation(), validate, createMovie)
   .get("/movie/:id", findMovieById)
-  .get("/movie", getAllMovies);
+  .get("/movie", getAllMovies)
+  .delete("/movie/:id", removeMovie);
