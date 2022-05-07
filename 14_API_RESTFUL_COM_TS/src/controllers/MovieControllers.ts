@@ -26,7 +26,9 @@ export async function findMovieById(req: Request, res: Response) {
     const movie = await MovieModel.findById(id);
 
     if (!movie) {
-      return res.status(404).json({ error: "Filme não existe." });
+      return res
+        .status(404)
+        .json({ message: "Filme não existe.", errorCode: -1 });
     }
 
     return res.status(200).json(movie);
@@ -57,7 +59,9 @@ export async function removeMovie(req: Request, res: Response) {
     const movie = await MovieModel.findById(id);
 
     if (!movie) {
-      return res.status(404).json({ error: "Filme não existe." });
+      return res
+        .status(404)
+        .json({ message: "Filme não existe.", errorCode: -1 });
     }
 
     await movie.delete();
@@ -67,5 +71,29 @@ export async function removeMovie(req: Request, res: Response) {
     return res
       .status(422)
       .json({ message: "Erro ao apagar filme", errorCode: -1 });
+  }
+}
+
+export async function updateMovie(req: Request, res: Response) {
+  try {
+    const { id } = req.params;
+    const data = req.body;
+
+    const movie = await MovieModel.findById(id);
+
+    if (!movie) {
+      return res
+        .status(404)
+        .json({ message: "Filme não existe.", errorCode: -1 });
+    }
+
+    await MovieModel.updateOne({ _id: id }, data);
+
+    return res.status(200).json(data);
+  } catch (error: any) {
+    Logger.error(`Erro no sistema: ${error.message}`);
+    return res
+      .status(422)
+      .json({ message: "Erro ao atualizar filme", errorCode: -1 });
   }
 }
